@@ -336,4 +336,4 @@ layer_4/tile_data = PackedInt32Array(131082, 524289, 2, 196618, 524289, 3, 13107
 
 [node name="brown_frog" parent="." instance=ExtResource("7_272bh")]
 position = Vector2(40, 484)
-scale = Vector2(6, 6)
+scale = Vector2(5.5, 5.5)
