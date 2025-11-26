@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cbrvyfjs2r5g4"]
+[gd_scene load_steps=28 format=3 uid="uid://cbrvyfjs2r5g4"]
 
 [ext_resource type="Texture2D" uid="uid://bsygwojm5f63k" path="res://froggy-green.png" id="1_lnccb"]
 
@@ -203,6 +203,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnccb"]
+radius = 3.81103
+height = 16.2507
+
 [node name="green_frog" type="Area2D"]
 texture_filter = 1
 position = Vector2(125, 130)
@@ -213,3 +217,8 @@ sprite_frames = SubResource("SpriteFrames_s6blh")
 animation = &"side_rest"
 frame_progress = 0.762241
 metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.193623, 4)
+rotation = -1.5637
+shape = SubResource("CapsuleShape2D_lnccb")

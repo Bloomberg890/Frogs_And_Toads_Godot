@@ -3,7 +3,7 @@ extends Area2D
 @export var start_pos := Vector2.ZERO
 
 const CELL_WIDTH := 96
-var direction := Vector2.RIGHT
+var direction := Vector2.LEFT
 @onready var anim = $AnimatedSprite2D
 
 func _ready():
@@ -15,7 +15,7 @@ func _input_event(viewport, event, shape_idx):
 
 func move_one_cell():
 	anim.play("side_jump")
-
+	
 	var start_pos = position
 	var end_pos = start_pos + direction * Vector2(CELL_WIDTH, 0)
 

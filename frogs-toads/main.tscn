@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://m4wumkyhfri8"]
+[gd_scene load_steps=19 format=3 uid="uid://m4wumkyhfri8"]
 
+[ext_resource type="Script" uid="uid://wwjx7mawk3hw" path="res://main.gd" id="1_dg77c"]
 [ext_resource type="Texture2D" uid="uid://ttnj602i2rwx" path="res://Background/Brown.png" id="1_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dl0ava87uussl" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_Plants.png" id="2_7mycd"]
 [ext_resource type="Texture2D" uid="uid://csnb277vmm4un" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="3_272bh"]
@@ -7,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://crnj11fx7pd4r" path="res://Terrain (16x16).png" id="5_kek77"]
 [ext_resource type="Texture2D" uid="uid://desj2ejgj5iv1" path="res://Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://2xxjsc3ihdoj" path="res://brown_frog.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://cbrvyfjs2r5g4" path="res://green_frog.tscn" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://b7jvx84u7v484" path="res://green_frog.gd" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://i7l63jy7ljyw" path="res://pink_frog.tscn" id="10_efxa6"]
+[ext_resource type="Script" uid="uid://birtn6ayyserd" path="res://pink_frog.gd" id="11_dg77c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
 texture = ExtResource("2_7mycd")
@@ -307,12 +312,17 @@ sources/3 = SubResource("TileSetAtlasSource_ycdy4")
 sources/4 = SubResource("TileSetAtlasSource_272bh")
 
 [node name="Node" type="Node"]
+script = ExtResource("1_dg77c")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = 19.0
+offset_right = -8.0
+offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_lquwl")
@@ -335,5 +345,33 @@ layer_4/name = "Sunflower"
 layer_4/tile_data = PackedInt32Array(131082, 524289, 2, 196618, 524289, 3, 131073, 524289, 2, 196609, 524289, 3, 131079, 524289, 2, 196615, 524289, 3, 262153, 458753, 3, 393217, 458753, 3, 393223, 393217, 3, 262146, 393217, 3, 196611, 327681, 0, 196619, 327681, 0, 262144, 327681, 0)
 
 [node name="brown_frog" parent="." instance=ExtResource("7_272bh")]
-position = Vector2(40, 484)
+position = Vector2(157, 474)
 scale = Vector2(6, 6)
+
+[node name="brown_frog2" parent="." instance=ExtResource("7_272bh")]
+position = Vector2(250, 480)
+scale = Vector2(6, 6)
+
+[node name="brown_frog3" parent="." instance=ExtResource("7_272bh")]
+position = Vector2(349, 473)
+scale = Vector2(6, 6)
+
+[node name="green_frog" parent="." instance=ExtResource("8_5vw27")]
+position = Vector2(618, 476)
+scale = Vector2(-6, 6)
+script = ExtResource("9_kek77")
+
+[node name="pink_frog" parent="." instance=ExtResource("10_efxa6")]
+position = Vector2(711, 485)
+scale = Vector2(-6, 6)
+script = ExtResource("11_dg77c")
+
+[node name="green_frog2" parent="." instance=ExtResource("8_5vw27")]
+position = Vector2(811, 479)
+scale = Vector2(-6, 6)
+script = ExtResource("9_kek77")
+
+[node name="green_frog3" parent="." instance=ExtResource("8_5vw27")]
+position = Vector2(909, 490)
+scale = Vector2(-6, 6)
+script = ExtResource("9_kek77")

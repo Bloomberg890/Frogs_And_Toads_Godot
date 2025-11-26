@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://i7l63jy7ljyw"]
+[gd_scene load_steps=28 format=3 uid="uid://i7l63jy7ljyw"]
 
 [ext_resource type="Texture2D" uid="uid://b3uac4f6qtk2" path="res://froggy-pink.png" id="1_rsq1s"]
 
@@ -203,6 +203,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rsq1s"]
+radius = 4.62492
+height = 14.4663
+
 [node name="pink_frog" type="Area2D"]
 texture_filter = 1
 position = Vector2(134, 128)
@@ -213,3 +217,8 @@ sprite_frames = SubResource("SpriteFrames_e4tyx")
 animation = &"side_rest"
 frame_progress = 0.908078
 metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.0607829, 3.3125)
+rotation = -1.57679
+shape = SubResource("CapsuleShape2D_rsq1s")
