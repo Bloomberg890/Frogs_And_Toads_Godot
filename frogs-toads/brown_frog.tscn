@@ -1,7 +1,8 @@
 [gd_scene load_steps=29 format=3 uid="uid://2xxjsc3ihdoj"]
 
-[ext_resource type="Script" uid="uid://b207hp0dft5d" path="res://brown_frog.gd" id="1_2t60q"]
 [ext_resource type="Texture2D" uid="uid://nhpl5r801n1q" path="res://froggy-brown.png" id="1_mrlua"]
+
+[sub_resource type="GDScript" id="GDScript_mrlua"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2t60q"]
 atlas = ExtResource("1_mrlua")
@@ -206,19 +207,18 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2t60q"]
 radius = 4.75121
-height = 17.0436
+height = 12.2108
 
 [node name="brown_frog" type="Area2D"]
 texture_filter = 1
-position = Vector2(126, 127)
 scale = Vector2(16, 16)
-script = ExtResource("1_2t60q")
+script = SubResource("GDScript_mrlua")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(12.5, 0.625)
 sprite_frames = SubResource("SpriteFrames_158qb")
 animation = &"side_jump"
-frame_progress = 0.974007
+frame_progress = 0.105542
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

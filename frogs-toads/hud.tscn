@@ -1,0 +1,182 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsl7ah0iisugn"]
+
+[ext_resource type="Script" uid="uid://d6sofv3r3wwd" path="res://hud.gd" id="1_37p78"]
+[ext_resource type="FontFile" uid="uid://dmygedkohw14f" path="res://SuperFrog-Yqy1q.ttf" id="2_64ctp"]
+[ext_resource type="StyleBox" uid="uid://ccokjonalrftx" path="res://button_style.tres" id="3_8sq4i"]
+[ext_resource type="StyleBox" uid="uid://dqdcssn45feku" path="res://play_but.tres" id="3_640wx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2258"]
+bg_color = Color(0.6, 0.878431, 0.6, 0.501961)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.6, 0.878431, 0.6, 0.501961)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xsix"]
+bg_color = Color(0.890196, 0.6, 0.6, 0.501961)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.890196, 0.6, 0.6, 0.501961)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8sq4i"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.360784, 0.360784, 0.360784, 0.501961)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.360784, 0.360784, 0.360784, 0.501961)
+border_blend = true
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_37p78")
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu"]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 1153.0
+offset_bottom = 90.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/CenterContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="Menu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = ExtResource("3_640wx")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_640wx")
+theme_override_styles/hover_pressed = ExtResource("3_640wx")
+theme_override_styles/hover_mirrored = ExtResource("3_640wx")
+theme_override_styles/hover = ExtResource("3_640wx")
+theme_override_styles/pressed_mirrored = ExtResource("3_640wx")
+theme_override_styles/pressed = ExtResource("3_640wx")
+theme_override_styles/normal_mirrored = ExtResource("3_640wx")
+theme_override_styles/normal = ExtResource("3_640wx")
+text = "Play"
+
+[node name="WinScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 39.0
+offset_top = 29.0
+offset_right = 79.0
+offset_bottom = 69.0
+
+[node name="CenterContainer" type="CenterContainer" parent="WinScreen"]
+offset_left = -39.0
+offset_top = -23.0
+offset_right = 1114.0
+offset_bottom = 103.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinScreen/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="WinScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 84
+theme_override_styles/normal = SubResource("StyleBoxFlat_a2258")
+text = "You Win!!"
+horizontal_alignment = 1
+
+[node name="LoseScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 46.0
+offset_right = 1153.0
+offset_bottom = 86.0
+
+[node name="CenterContainer" type="CenterContainer" parent="LoseScreen"]
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 1153.0
+offset_bottom = 44.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LoseScreen/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LoseScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_1xsix")
+text = "You Lose!!"
+horizontal_alignment = 1
+
+[node name="GameUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="GameUI"]
+offset_left = 834.0
+offset_top = -31.0
+offset_right = 1102.0
+offset_bottom = 105.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameUI/CenterContainer"]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="GameUI/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = ExtResource("3_8sq4i")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_8sq4i")
+theme_override_styles/hover_pressed = ExtResource("3_8sq4i")
+theme_override_styles/hover_mirrored = ExtResource("3_8sq4i")
+theme_override_styles/hover = ExtResource("3_8sq4i")
+theme_override_styles/pressed_mirrored = ExtResource("3_8sq4i")
+theme_override_styles/pressed = ExtResource("3_8sq4i")
+theme_override_styles/normal_mirrored = ExtResource("3_8sq4i")
+theme_override_styles/normal = ExtResource("3_8sq4i")
+text = "Quit"
+
+[node name="Restart" type="Button" parent="GameUI/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = ExtResource("3_8sq4i")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_8sq4i")
+theme_override_styles/hover_pressed = ExtResource("3_8sq4i")
+theme_override_styles/hover_mirrored = ExtResource("3_8sq4i")
+theme_override_styles/hover = ExtResource("3_8sq4i")
+theme_override_styles/pressed_mirrored = ExtResource("3_8sq4i")
+theme_override_styles/pressed = ExtResource("3_8sq4i")
+theme_override_styles/normal_mirrored = ExtResource("3_8sq4i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8sq4i")
+text = "Restart"
+
+[connection signal="pressed" from="Menu/CenterContainer/VBoxContainer/Play" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="GameUI/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="GameUI/CenterContainer/VBoxContainer/Restart" to="." method="_on_restart_button_pressed"]

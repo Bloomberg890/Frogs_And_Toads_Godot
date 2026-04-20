@@ -212,4 +212,4 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7taqo")
 animation = &"side_jump"
-frame_progress = 0.202484
+frame_progress = 0.693314

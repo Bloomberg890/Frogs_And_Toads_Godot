@@ -211,5 +211,5 @@ scale = Vector2(16, 16)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l4sfi")
 animation = &"side_rest"
-frame_progress = 0.553186
+frame_progress = 0.673871
 metadata/_edit_group_ = true

@@ -181,9 +181,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yt4gx")
 }],
-"loop": true,
+"loop": false,
 "name": &"side_jump",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -204,8 +204,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnccb"]
-radius = 3.81103
-height = 16.2507
+radius = 4.56238
+height = 15.4868
 
 [node name="green_frog" type="Area2D"]
 texture_filter = 1
@@ -215,7 +215,6 @@ scale = Vector2(15.494, 16)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s6blh")
 animation = &"side_rest"
-frame_progress = 0.762241
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
