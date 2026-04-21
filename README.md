@@ -76,12 +76,6 @@ Swap all the frogs to the opposite side:
 
 ---
 
-## 💭 Cozy Thought
-
-> sometimes… the smallest jumps need the biggest thinking 🐸✨
-
----
-
 <p align="center">
   🌿 thanks for visiting the pond 🌿  
 </p>
